@@ -1,1 +1,0 @@
-# NYP-Ders-Odevleri
