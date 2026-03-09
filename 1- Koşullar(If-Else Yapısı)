@@ -1,0 +1,31 @@
+using System;
+
+namespace FirstProject
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Birinci Sayiyi Giriniz: ");
+            int birinciSayi = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("İkinci Sayiyi Giriniz: ");
+            int ikinciSayi = Convert.ToInt32(Console.ReadLine());
+
+            if (ikinciSayi == 0)
+            {
+                Console.WriteLine("2. Sayı 0 Olamaz!!!");
+            }
+            else if (birinciSayi % ikinciSayi == 0)
+            {
+                Console.WriteLine("1. Sayı 2. Sayıya Tam Bölünüyor");
+            }
+            else
+            {
+                Console.WriteLine("1. Sayı 2. Sayıya Tam Bölünemiyor");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
