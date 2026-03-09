@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Program
+    {
+        static bool AsalMi(int kontrolEdilecekSayi)
+        {
+            if (kontrolEdilecekSayi < 2) return false;
+
+            for (int bolen = 2; bolen * bolen <= kontrolEdilecekSayi; bolen++)
+            {
+                if (kontrolEdilecekSayi % bolen == 0) return false;
+            }
+            return true;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Bir sayı giriniz:");
+            string giris = Console.ReadLine();
+
+            if (!int.TryParse(giris, out int sinirDegeri))
+            {
+                Console.WriteLine("Hatalı giriş yaptınız.");
+                return;
+            }
+
+            if (sinirDegeri < 2)
+            {
+                Console.WriteLine("2'den küçük bir sayı girdiniz.");
+                return;
+            }
+
+            for (int sayi = 2; sayi <= sinirDegeri; sayi++)
+            {
+                if (AsalMi(sayi))
+                {
+                    // Sayıların yan yana yapışıp "235711" gibi okunmaz hale 
+                    // gelmemesi için araya bir boşluk eklendi.
+                    Console.Write(sayi + " "); 
+                }
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
