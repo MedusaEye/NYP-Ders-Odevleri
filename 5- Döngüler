@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //int a = 4;
+            //int b = 5;
+            //Console.WriteLine($" iki sayının toplamı = { a + b}");
+            //Console.WriteLine($"birinci sayi {a}, ikinci sayi {b}");
+            //Console.ReadKey();
+            
+            // SORU: Klavyeden girilen a sayısının yine klavyeden girilen b sayısına tam bölünüp bölünmediğini bulan kodu c# ile kodlayınız
+
+            //Console.Write("a Sayısını Giriniz:");
+            //int a = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("b Sayısını Giriniz:");
+            //int b = Convert.ToInt32(Console.ReadLine());
+
+            //if (b == 0)
+            //{
+            //    Console.WriteLine("Bir Sayı 0'a Bölünemez.");
+            //}
+            //else if (a % b == 0)
+            //{
+            //    Console.Write("a Sayısı b Sayısına Tam Bölünür.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Kalan Sayı: " + a%b);
+            //}
+            
+            //SORU: Üç sayıdan en büyüğünü bulan program
+
+            /*Console.Write("1. Sayıyı Giriniz:");
+            int sayi1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("2. Sayıyı Giriniz:");
+            int sayi2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("3. Sayıyı Giriniz:");
+            int sayi3 = Convert.ToInt32(Console.ReadLine());
+
+            if (sayi1 > sayi2 && sayi1 > sayi3)
+            {
+                Console.WriteLine("1. Sayı En Büyüktür");
+                Console.ReadKey();
+            }
+            else if (sayi2 > sayi3 && sayi2 > sayi1)
+            {
+                Console.WriteLine("2. Sayı En Büyüktür");
+                Console.ReadKey();
+            }
+            else if (sayi3 > sayi2 && sayi3 > sayi1)
+            {
+                Console.WriteLine("3. Sayı En Büyüktür");
+                Console.ReadKey();
+            }*/
+
+            //SORU:Kullanıcıdan alınan a ve b uzunlukları ile pisagor teoremi
+            Console.Write("A kenarı uzunluğunu giriniz: ");
+            int kenarA = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("B kenarı uzunluğunu giriniz: ");
+            int kenarB = Convert.ToInt32(Console.ReadLine());
+            
+            // ^ işareti XOR'dur. Karesini almak için kendisiyle çarptık.
+            int hipotenusKaresi = (kenarA * kenarA) + (kenarB * kenarB);
+            
+            double hipotenus = Math.Sqrt(hipotenusKaresi);
+            
+            Console.WriteLine($"Hipotenüs Uzunluğu: {hipotenus}");
+            
+            Console.ReadKey();
+        } 
+    }   
+}
