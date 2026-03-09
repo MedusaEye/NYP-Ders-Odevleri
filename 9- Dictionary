@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //SORU: Dictionary'e eklenen 3 öğrenci numarası ve adını ekrana yazdıran kod
+
+            Dictionary<int, string> ogrenciler = new Dictionary<int, string>();
+
+            ogrenciler.Add(1, "Arda");
+            ogrenciler.Add(2, "Ahmet");
+            ogrenciler.Add(3, "Mehmet");
+
+            Console.WriteLine(ogrenciler[1]);
+            Console.WriteLine(ogrenciler[2]);
+            Console.WriteLine(ogrenciler[3]);
+
+            Console.ReadKey();
+        }
+    }
+}
