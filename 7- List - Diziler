@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //SORU: İlk 10 Asal Sayıyı Kullanıcıdan Almadan Listeye Koyup Ekranda Yazdır
+            List<int> asalSayilar = new List<int>();
+
+            asalSayilar.Add(2);
+            asalSayilar.Add(3);
+            asalSayilar.Add(5);
+            asalSayilar.Add(7);
+            asalSayilar.Add(11);
+            asalSayilar.Add(13);
+            asalSayilar.Add(17);
+            asalSayilar.Add(19);
+            asalSayilar.Add(23);
+            asalSayilar.Add(29);
+
+            Console.WriteLine("İlk 10 asal sayı:");
+            
+            foreach (int asalSayi in asalSayilar)
+            {
+                Console.WriteLine(asalSayi);
+            }
+            
+            Console.ReadKey();
+        }
+    }
+}
