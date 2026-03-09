@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        //SORU: Bir List koleksiyonu tanımlayınız ve içerisinde asal sayıların ilk 10 sayısını ekleyiniz.
+
+        static bool AsalMi(int kontrolEdilecekSayi)
+        {
+            if (kontrolEdilecekSayi < 2) return false;
+
+            for (int bolen = 2; bolen * bolen <= kontrolEdilecekSayi; bolen++)
+            {
+                if (kontrolEdilecekSayi % bolen == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        static void Main(string[] args)
+        {
+            List<int> asalSayilar = new List<int>();
+            int sayi = 2;
+
+            // Soruda 10 sayı istendiği için koşul 20'den 10'a düşürüldü
+            while (asalSayilar.Count < 10)
+            {
+                if (AsalMi(sayi))
+                {
+                    asalSayilar.Add(sayi);
+                }
+                sayi++;
+            }
+
+            foreach (int asal in asalSayilar)
+            {
+                Console.WriteLine(asal);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
