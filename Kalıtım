@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    public class arabaadi
+    {
+        public string araba="Mersedes";
+        public void goster()
+        {
+            Console.WriteLine("Bu Çok Güzel Bir Araba");
+        }
+    }
+
+    public class araba : arabaadi 
+    {
+    
+        public void ArabaGetir()
+        {
+            Console.WriteLine("Bu Arabanın Markası " + araba);
+        }
+
+    }
+
+
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            araba araba = new araba();
+            araba.goster();
+            araba.ArabaGetir();
+            Console.ReadKey();
+        }
+    }
+}
