@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+
+
+    internal class motor
+    {
+        public void calisti()
+        {
+            Console.WriteLine("Motor Çalıştı");
+        }
+
+        public void durdu()
+        {
+            Console.WriteLine("Motor Durdu");
+        }
+
+    }
+
+
+    internal class araba
+    {
+        motor degisken = new motor();
+
+        public void arabacalisti()
+        {
+            degisken.calisti();
+            Console.WriteLine("Araba Çalıştı");
+        }
+
+        public void arabadurdu()
+        {
+            degisken.durdu();
+            Console.WriteLine("Araba Durdu");
+        }
+
+    }
+
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            araba araba = new araba();
+            araba.arabacalisti();
+            araba.arabadurdu();
+        }
+    }
+}
