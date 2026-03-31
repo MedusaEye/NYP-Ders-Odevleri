@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+
+    public class ogrenci
+    {
+        string adi = "Koray",soyadi="Çiğdem";
+
+        public void ogrencibilgi()
+        {
+            Console.WriteLine("Öğrenci Adı: "+ adi + "\nÖğrenci Soyadı: "+ soyadi);
+        }
+    }
+
+    public class ogrencidetay
+    {
+        ogrenci ogrenciBilgileri = new ogrenci();
+        public void ogrencibilgi2()
+        {
+            string ogrenciadres = "Kayseri/Melikgazi";
+            ogrenciBilgileri.ogrencibilgi();
+            Console.WriteLine("Öğrencinin Adresi: "+ ogrenciadres );
+        }
+    }
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ogrencidetay OgrenciBilgileri = new ogrencidetay();
+            OgrenciBilgileri.ogrencibilgi2();
+            Console.ReadKey();
+        }
+    }
+}
